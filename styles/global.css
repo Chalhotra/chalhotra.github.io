@@ -1,21 +1,53 @@
+/* CSS Variables for theming */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --text-secondary: #666666;
+  --text-tertiary: #999999;
+  --border-color: #eaeaea;
+  --separator-color: #cccccc;
+  --link-color: #0070f3;
+  --link-hover: #0056b3;
+  --selection-bg: #b3d4fc;
+  --selection-text: #000000;
+
+  /* Toggle theme variables */
+  --toggle-bg: #e2e8f0;
+  --toggle-bg-hover: #cbd5e1;
+  --toggle-border: #d1d5db;
+  --toggle-thumb: #ffffff;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --text-secondary: #cccccc;
+  --text-tertiary: #888888;
+  --border-color: #333333;
+  --separator-color: #555555;
+  --link-color: #58a6ff;
+  --link-hover: #79c0ff;
+  --selection-bg: #264f78;
+  --selection-text: #ffffff;
+
+  /* Toggle theme variables for dark mode */
+  --toggle-bg: #374151;
+  --toggle-bg-hover: #4b5563;
+  --toggle-border: #4b5563;
+  --toggle-thumb: #1f2937;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    Segoe UI,
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    Fira Sans,
-    Droid Sans,
-    Helvetica Neue,
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 16px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 * {
@@ -23,15 +55,23 @@ body {
 }
 
 a {
-  color: #0070f3;
+  color: var(--link-color);
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 a:hover {
   text-decoration: underline;
+  color: var(--link-hover);
 }
 
 img {
   max-width: 100%;
   display: block;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--selection-bg);
+  color: var(--selection-text);
 }
