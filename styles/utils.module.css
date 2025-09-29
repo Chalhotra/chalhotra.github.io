@@ -44,7 +44,7 @@
 }
 
 .logoLg:hover {
-  color: var(--link-hover);
+  color: var(--link-color);
   transform: scale(1.05);
 }
 
@@ -60,7 +60,7 @@
 }
 
 .logoSm:hover {
-  color: var(--link-hover);
+  color: var(--link-color);
   transform: scale(1.05);
 }
 

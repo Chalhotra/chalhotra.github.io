@@ -12,7 +12,7 @@ const name = "chetak";
 export const siteTitle = "Next.js Sample Website";
 
 const Logo = ({ home }) => (
-  <div className={home ? utilStyles.logoLg : utilStyles.logoSm}>
+  <div className={utilStyles.logoLg}>
     <Latex>$\Omega$</Latex>
   </div>
 );
@@ -34,19 +34,13 @@ const Navigation = () => (
 );
 
 const HeaderContent = ({ home }) => (
-  <div
-    className={styles.textBlock}
-    style={{ marginBottom: home ? "-1.5rem" : "-1.2rem" }}
-  >
-    {home ? (
-      <h1 className={utilStyles.heading2Xl}>{name}</h1>
-    ) : (
-      <h2 className={utilStyles.headingLg}>
-        <Link href="/" className={utilStyles.colorInherit}>
-          {name}
-        </Link>
-      </h2>
-    )}
+  <div className={styles.textBlock} style={{ marginBottom: "-1.2rem" }}>
+    <h2 className={utilStyles.headingLg}>
+      <Link href="/" className={utilStyles.colorInherit}>
+        {name}
+      </Link>
+    </h2>
+
     <Navigation />
   </div>
 );
