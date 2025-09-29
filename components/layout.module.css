@@ -3,7 +3,11 @@
   padding: 0 1rem;
   margin: 3rem auto 6rem;
 }
-
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 .header {
   display: flex;
   flex-direction: row;
